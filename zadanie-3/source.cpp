@@ -1,26 +1,36 @@
 #include <iostream>
+#include <array>
+#include <vector>
+
 using namespace std;
 
-int main()
+#include "program.h"
+
+int testFunkcja(int x)
 {
-    //OpenGl nie korzysta ze stringów, jedynie z tablic znakow
-    const char* liczba_napis = "g7744gk";
-    size_t dlugosc_napisu{
-        strlen(liczba_napis)
-    };
+	return 0;
+}
 
-    int liczba = atoi(liczba_napis);
+vector<string> wektor_str{ "napis", "napis" };
 
+int main(int argc, char* argv[]) {
+	::testing::InitGoogleTest(&argc, argv);
+	// ewentualny kod
 
-    if (liczba) {
-        printf("%d", liczba);
-    }
-    else {
-        while (!isdigit(liczba)) {
-            //liczba = atoi(liczba_napis +1);
-            //dokonczyc, jak sie poruszac po tablicy const char*
-        }
-        liczba_napis += 1;
-        printf("Konwersja niemozliwa");
-    }
+	return RUN_ALL_TESTS();
+}
+
+TEST(TestCaseName2, te_same_napisy) {
+	ASSERT_EQ(wektor_str.at(0), wektor_str.at(1));
+	//EXPECT_EQ(wektor_str.at(0).size(), wektor_str.at(1).size());
+}
+
+TEST(TestCaseName1, TestName1) {
+	EXPECT_EQ(1, 1);
+	EXPECT_TRUE(true);
+}
+
+TEST(TestCaseName1, TestName2) {
+	EXPECT_EQ(0, 1);
+	EXPECT_TRUE(true);
 }
