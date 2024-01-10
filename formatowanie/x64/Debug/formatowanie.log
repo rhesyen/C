@@ -1,0 +1,4 @@
+﻿  source.cpp
+C:\Users\Aniela\Desktop\baca\formatowanie\source.cpp(9,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\Aniela\Desktop\baca\formatowanie\source.cpp(12,23): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+  formatowanie.vcxproj -> C:\Users\Aniela\Desktop\baca\formatowanie\x64\Debug\formatowanie.exe
